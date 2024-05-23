@@ -1,0 +1,88 @@
+@media (min-width: 951px) and (max-width: 1700px){
+    /* header */
+        #header .home .first span {font-size: 6rem;}
+        #header .home .second span {font-size: 6rem;}
+        #header .home .third span {font-size: 5rem;}
+        #header .home .fourth span {font-size: 5rem;}
+    /* about */
+    /* works */
+        .button.button--aylen {background: rgba(0, 0, 0, 0.8);}
+        #contents .works h1 {padding-top: 150px;}
+        .hover_wrap {top: 15%;}
+    }
+    @media (min-width: 381px) and (max-width: 950px){
+        * {font-size: 12px;}
+    /* header */
+        #header .home .first span {font-size: 5rem;}
+        #header .home .second span {font-size: 5rem;}
+        #header .home .third span {font-size: 4rem;}
+        #header .home .fourth span {font-size: 4rem;}
+
+        #header .menu-ico {top: 3%;}
+        #header .menu > ul > li {padding: 1.2em}
+        #header .menu > ul > li > a {font-size: 14px;}
+    
+        #header .menu {right: 20%;}
+    
+        #header .home {position: absolute; top: 38%; left: 18%;}
+        #header .home h1 {font-size: 6rem; line-height: 8rem; word-break: break-all;}
+        #header .home h2 {font-size: 5rem;}
+        #header .aside > ul > li > p {font-size: 16px;}
+    
+        .cube {display: none;}
+    /* about */
+        #contents .text-box p {font-size: 3.5rem; line-height: 4.2rem;}
+    /* works */
+        .button.button--aylen {background: rgba(0, 0, 0, 0.8);}
+    
+        #contents .works {height: 230vh;}
+        #contents .works h1 {padding-top: 150px;}
+    
+        .hover_wrap {top: 15%; z-index: 1000;}
+    }
+    @media (min-width: 0) and (max-width: 380px){
+        * {font-size: 12px;}
+    /* header */
+        #header .home .first span {font-size: 4rem;}
+        #header .home .second span {font-size: 4rem;}
+        #header .home .third span {font-size: 3rem;}
+        #header .home .fourth span {font-size: 3rem;}
+
+        #header .menu-ico {top: 3%; right: -5%;}
+        #header .menu > ul > li {padding: 1.2em}
+        #header .menu > ul > li > a {font-size: 14px;}
+    
+        #header .menu {right: 26%;}
+    
+        #header .home {position: absolute; top: 38%; left: 18%;}
+        #header .home h1 {font-size: 4rem; line-height: 6rem; word-break: break-all;}
+        #header .home h2 {font-size: 3rem;}
+        #header .aside > ul > li > p {font-size: 14px;}
+    
+    /* about */
+        #contents .about {height: 300vh;}
+        #contents .about h1 {padding-top: 110px; font-size: 2.5rem;}
+        #contents .about h1.on {padding-top: 180px;}
+        #contents .text-box {top: 35%; width: 60vw;}
+        #contents .text-box .text-title {padding-top: 50px; padding-bottom: 70px;}
+        #contents .text-box p {font-size: 3.5rem; line-height: 3.8rem;}
+        #contents .text-box b {padding-top: 40px; font-size: 1.7rem;}
+        #contents .text-box span {font-size: 14px; line-height: 1.7rem;}
+    /* works */
+        .button.button--aylen {background: rgba(0, 0, 0, 0.8);}
+    
+        #contents .works:after {height: 150px;}
+        #contents .works {height: 250vh;}
+        #contents .works h1 {padding-top: 100px; font-size: 2.5rem; line-height:4.2rem;}
+    
+        .hover_wrap {top: 10%; left: 50%;}
+        .hover_wrap .effect {margin: 20px;}
+        .hover_wrap .effect .figcaption {display: none;}
+    /* contact */
+        #contents .contact {height: 110vh;}
+        #contents .contact .inn h1 {font-size: 2.5rem;}
+        #contents .contact .inn .form-area {width: 230px; top: 50%; font-size: 12px/1.8em;}
+        #contents .contact .inn input {width: 230px; padding: 3px; font-size: 12px/1.8em;}
+        #contents .contact .inn textarea {width: 230px; height: 230px; padding: 3px; font-size: 12px/1.8em;}
+        #contents .contact .inn p{ font-size: 12px/1.8em;}
+    }
