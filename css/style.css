@@ -67,6 +67,8 @@ a {text-decoration: none;}
 #contents .works ul li h1 {display: block; font-size: 33px; font-weight: bold;}
 .material-symbols-outlined {font-variation-settings: 'FILL' 0, 'wght' 800, 'GRAD' 0, 'opsz' 24;}
 .card_title {display: flex; justify-content: space-between}
+#contents .works .summary table {margin: 1.2rem 0; width: 100%;}
+
 
 /* contact */
 #contents .contact {position: relative; width: 100%; color: #f6f6f6; background-color: #0101b9;}
