@@ -86,7 +86,7 @@ a {text-decoration: none;}
 #contents .about .wrap .item p.title {font-family: 'DOSMyungjo'; font-size: 26px;}
 #contents .about .wrap .item ul li::before {content: ''; display: inline-block; margin-right: 10px; width: 5px; height: 5px; background-color: #333;}
 #contents .about .wrap .item ul li p {font-weight: bold;}
-#contents .about .wrap .photo {width: 550px; height: 662px; background-image: url(./../images/photo.jpg);}
+#contents .about .wrap .photo {width: 550px; height: 662px; background-image: url(./../images/portfolio2025_slogan.png);}
 
 /* works */
 #contents .works {position: relative; width: 100%; height: 100vh; background-color: #000;}
