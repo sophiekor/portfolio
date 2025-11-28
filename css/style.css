@@ -47,7 +47,7 @@ a {text-decoration: none;}
     }
   }
 #header .aside > ul {display: flex; justify-content: start;}
-#header .aside > ul > li {flex-direction: row; padding: 1.5em;}
+#header .aside > ul > li {flex-direction: row; padding: 1em;}
 #header .aside > ul > li > p {color: #333; font-size: 18px; font-weight: 500;}
 
 .blob {
