@@ -7,42 +7,28 @@
   font-weight: normal;
   font-style: normal;
 }
-@media (max-width: 1920px) {
-  .wrap {
-    transform: scale(1);
-  }
-}
 
 /* common */
 * {margin: 0; padding: 0; box-sizing: border-box; list-style: none; letter-spacing: -0.02em; font-family: 'Noto Sans KR', sans-serif; font-size: 14px;}
 a {text-decoration: none;}
 .wrap {width: 100%; overflow: hidden;}
+@media (max-width: 1920px) {
+  .wrap {
+    transform: scale(1);
+  }
+}
 .mgt30{margin-top: 30px;}
 
 /* header */
-#header {position: relative; width: 100%; height: 105vh; overflow: hidden; background: url(./../images/portfolio2025_main.jpg) no-repeat 50% 0; background-color: #f4f4f4;}
+#header {position: relative; width: 100%; height: 100vh; overflow: hidden; background: url(./../images/portfolio2025_main.jpg) no-repeat 50% 0; background-color: #f4f4f4;}
 #header .scroll-position {position: fixed; bottom: 4%; left: 4%; width: 50px; height: 50px;
                         line-height: 50px; text-align: center; color: #fff; z-index: 1000;}
-#header .aside-wrapper {
-  position: fixed;
-  top: 50%;
-  left: 0;
-  z-index: 1000;
-  opacity: 0;
-  animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+@media screen and (max-width: 1600px) {
+  .blob {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
-#header .aside {
-  transform: rotate(-90deg);
-}
-
-#header .aside-wrapper.show {
-  opacity: 1;
-  transition: .5s;
-}
-#header .aside > ul {display: flex; justify-content: start;}
-#header .aside > ul > li {flex-direction: row; padding: 1em;}
-#header .aside > ul > li > p {color: #333; font-size: 18px; font-weight: 500;}
-
 .blob {
   position: absolute;
   top: 100px;
@@ -67,9 +53,27 @@ a {text-decoration: none;}
   }
 }
 
+/* 풍선 터질 때 몸통 애니메이션 */
+.blob.pop {
+  animation: pop-burst 0.35s forwards ease-out;
+}
+
+/* 풍선 몸체 터지는 모션 */
+@keyframes pop-burst {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);  /* 점점 작아지며 사라짐 */
+    opacity: 0;
+  }
+}
+
+
 /* contents */
 #contents .about {position: relative; width: 100%; height: 1200px; background-color: #f4f4f4;}
-#contents .about .wrap {position: relative; width: 1100px; margin: 0 auto;}
+#contents .about .wrap {position: relative; width: 1100px; margin: 0 auto; padding: 30px 0;}
 #contents .about .wrap .intro p {margin: 30px 0 5px; font-size: 16px; font-weight: bold;}
 #contents .about .wrap .intro .skill {width: 380px; margin-top: 20px; display: grid; grid-template-columns: repeat(5, 1fr); text-align: center;}
 #contents .about .wrap .intro .skill_icon {width: 75px; margin-top: 15px;}
@@ -95,29 +99,63 @@ a {text-decoration: none;}
 #contents .works .summary table {margin: 1.2rem 0; width: 100%;}
 
 
-/* contact */
-#contents .contact {position: relative; width: 100%; color: #f6f6f6; background-color: #0101b9;}
-#contents .contact .inn {width: 1100px; margin: 0 auto; height: 50px; padding: 15px 0;}
-
-.typing-demo.show {
-  width: 37ch;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
-  font-family: DOSMyungjo;
-  font-size: 2em;
-  letter-spacing: .04em;
-  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
-}
-
-@keyframes typing {
-  from {
-    width: 0
+/* aside */
+@media screen and (max-width: 1600px) {
+  .aside {
+    opacity: 0;
+    pointer-events: none;
   }
 }
-    
-@keyframes blink {
-  50% {
-    border-color: transparent
-  }
+.aside-wrapper {
+  position: fixed;
+  top: 50%;
+  left: -10%;
+  z-index: 1000;
+  opacity: 0;
+  animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+.aside {
+  transform: rotate(-90deg);
+}
+
+.aside-wrapper.show {
+  opacity: 1;
+  transition: .5s;
+}
+.aside > ul {display: flex; justify-content: start;}
+.aside > ul > li {flex-direction: row; padding: 1em;}
+.aside > ul > li > p {color: #333; font-size: 18px; font-weight: 500;}
+
+/* 기본 색 */
+.aside p {
+  color: #333;
+  transition: color .3s;
+}
+
+/* #works에 도달했을 때 적용할 색 */
+.aside.color-white p {
+  color: #f6f6f6;
+}
+
+#toTopBtn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  padding: 12px 16px;
+  font-size: 20px;
+  background: #000;
+  color: #fff;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s;
+  z-index: 2000;
+}
+
+/* 나타날 때 */
+#toTopBtn.show {
+  opacity: 1;
+  pointer-events: auto;
 }
