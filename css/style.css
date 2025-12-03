@@ -97,7 +97,7 @@ a {text-decoration: none;}
 .blob_01 {
   opacity: 0;
   position: absolute;
-  top: 40vh;
+  bottom: 0vw;
   left: 0;
   background-image: url(./../images/header_deco_01_01.png);
   background-size: 100%;
@@ -109,7 +109,7 @@ a {text-decoration: none;}
 }
 @keyframes bounce2{
   to{
-      top: 35vh;
+      bottom: 5vw;
       transform: scale(1.1,1.1);
   }
 }
