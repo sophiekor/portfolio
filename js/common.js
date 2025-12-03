@@ -1,6 +1,6 @@
 //main
 setTimeout(function() {
-  document.querySelector('#header .aside').classList.add('show');
+  document.querySelector('#header .aside-wrapper').classList.add('show');
 }, 1000);
 
 window.addEventListener('scroll', function(){
