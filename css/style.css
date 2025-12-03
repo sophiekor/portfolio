@@ -28,7 +28,7 @@ a {text-decoration: none;}
 .mobile-text {
   opacity: 0;
   transition: opacity .4s ease;
-  line-height: 9vw;
+  line-height: 10vw;
 }
 
 @media screen and (max-width: 1360px) {
@@ -39,7 +39,7 @@ a {text-decoration: none;}
 
 #header .mobile-text {
   padding: 30vh 5vw;
-  font-size: 8vw;
+  font-size: 10vw;
   font-weight: bold;
   text-align: right;
   text-transform: uppercase;
