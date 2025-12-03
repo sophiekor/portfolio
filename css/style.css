@@ -7,6 +7,11 @@
   font-weight: normal;
   font-style: normal;
 }
+@media (max-width: 1920px) {
+  body {
+    transform: scale(1);
+  }
+}
 
 /* common */
 * {margin: 0; padding: 0; box-sizing: border-box; list-style: none; letter-spacing: -0.02em; font-family: 'Noto Sans KR', sans-serif; font-size: 14px;}
