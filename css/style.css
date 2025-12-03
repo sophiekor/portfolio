@@ -17,18 +17,34 @@ a {text-decoration: none;}
     transform: scale(1);
   }
 }
-.mgt30{margin-top: 30px;}
 
 /* header */
-#header {position: relative; width: 100%; height: 105vh; background: url(./../images/portfolio2025_main.jpg) no-repeat 50% 0; background-color: #f4f4f4;}
-#header .scroll-position {position: fixed; bottom: 4%; left: 4%; width: 50px; height: 50px;
-                        line-height: 50px; text-align: center; color: #fff; z-index: 1000;}
-@media screen and (max-width: 1600px) {
-  .blob {
-    opacity: 0;
-    pointer-events: none;
+#header {position: relative; width: 100%; height: 100vh; background: url(./../images/portfolio2025_main.jpg) no-repeat 50% 0; background-color: #f4f4f4;}
+
+@media (max-width: 1360px) {
+  #header {background-image: none;}
+}
+
+.mobile-text {
+  opacity: 0;
+  transition: opacity .4s ease;
+  line-height: 9vw;
+}
+
+@media screen and (max-width: 1360px) {
+  .mobile-text {
+    opacity: 1;
   }
 }
+
+#header .mobile-text {
+  padding: 30vh 5vw;
+  font-size: 8vw;
+  font-weight: bold;
+  text-align: right;
+  text-transform: uppercase;
+}
+
 .blob {
   position: absolute;
   top: 100px;
@@ -39,6 +55,12 @@ a {text-decoration: none;}
   transform-origin: 50% 50%;
   transform: scale(1.2,1.1);
   animation: bounce 0.6s cubic-bezier(0, 0, 0.18, 0.99) infinite alternate;
+}
+@media screen and (max-width: 1600px) {
+  .blob {
+    opacity: .3;
+    pointer-events: none;
+  }
 }
 @keyframes bounce{
   to{
@@ -55,6 +77,7 @@ a {text-decoration: none;}
 
 /* 풍선 터질 때 몸통 애니메이션 */
 .blob.pop {
+  display: none;
   animation: pop-burst 0.35s forwards ease-out;
 }
 
@@ -69,6 +92,51 @@ a {text-decoration: none;}
     opacity: 0;
   }
 }
+
+
+.blob_01 {
+  opacity: 0;
+  position: absolute;
+  top: 40vh;
+  left: 0;
+  background-image: url(./../images/header_deco_01_01.png);
+  background-size: 100%;
+  width: 50vw;
+  height: 50vw;
+  transform-origin: 50% 50%;
+  transform: scale(1.2,1.1);
+  animation: bounce2 0.6s cubic-bezier(0, 0, 0.18, 0.99) infinite alternate;
+}
+@keyframes bounce2{
+  to{
+      top: 35vh;
+      transform: scale(1.1,1.1);
+  }
+}
+
+@media screen and (max-width: 1360px) {
+  .blob_01 {
+    opacity: 1;
+  }
+}
+
+.blob_02 {
+  opacity: 0;
+  position: absolute;
+  bottom: 10vh;
+  right: 0;
+  background-image: url(./../images/header_deco_01_02.png);
+  background-size: 100%;
+  width: 60vw;
+  height: 60vw;
+}
+
+@media screen and (max-width: 1360px) {
+  .blob_02 {
+    opacity: 1;
+  }
+}
+
 
 
 /* contents */
@@ -123,21 +191,21 @@ a {text-decoration: none;}
 #contents .about {position: relative; width: 100%; background-color: #f4f4f4;}
 #contents .about .wrap {position: relative; width: 1100px; margin: 0 auto; padding: 0 0 5rem 0;}
 #contents .about .wrap .intro .skill {
-  width: 100%;
+  width: 90%;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 16px;
+  text-align: center;
 }
 
 #contents .about .wrap .intro .skill_icon {
-  width: 100%; /* 75px 고정 제거 */
+  width: 90%;
   margin-top: 10px;
 }
 
 #contents .about .wrap .intro .skill_icon img {
   width: 45%;
 }
-#contents .about .wrap .intro .skill_icon .icon_title {letter-spacing: -0.05em;}
 #contents .about .wrap .item {display: inline-block; width: 540px; height: 100%; padding-top: 50px; box-sizing: border-box; line-height: 1.7; vertical-align: top;}
 #contents .about .wrap .item .title {font-family: 'DOSMyungjo'; font-size: 26px;}
 #contents .about .wrap .item ul li::before {content: ''; display: inline-block; margin-right: 10px; width: 5px; height: 5px; background-color: #333;}
@@ -215,7 +283,6 @@ a {text-decoration: none;}
   position: relative;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 24px;
 }
 
 #contents .works ul {
