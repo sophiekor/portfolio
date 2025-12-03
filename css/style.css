@@ -23,34 +23,22 @@ a {text-decoration: none;}
 #header {position: relative; width: 100%; height: 105vh; overflow: hidden; background: url(./../images/portfolio2025_main.jpg) no-repeat 50% 0; background-color: #f4f4f4;}
 #header .scroll-position {position: fixed; bottom: 4%; left: 4%; width: 50px; height: 50px;
                         line-height: 50px; text-align: center; color: #fff; z-index: 1000;}
+#header .aside-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 1000;
+  opacity: 0;
+  animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+#header .aside {
+  transform: rotate(-90deg);
+}
 
-#header .aside {opacity: 0; position: fixed; top: 50%; left: -220px; transform: rotate(-90deg); z-index: 1000;-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-  animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;}
-#header .aside.show {opacity: 1; transition: .5s; }
-  @-webkit-keyframes text-focus-in {
-    0% {
-      -webkit-filter: blur(12px);
-              filter: blur(12px);
-      opacity: 0;
-    }
-    100% {
-      -webkit-filter: blur(0px);
-              filter: blur(0px);
-      opacity: 1;
-    }
-  }
-  @keyframes text-focus-in {
-    0% {
-      -webkit-filter: blur(12px);
-              filter: blur(12px);
-      opacity: 0;
-    }
-    100% {
-      -webkit-filter: blur(0px);
-              filter: blur(0px);
-      opacity: 1;
-    }
-  }
+#header .aside-wrapper.show {
+  opacity: 1;
+  transition: .5s;
+}
 #header .aside > ul {display: flex; justify-content: start;}
 #header .aside > ul > li {flex-direction: row; padding: 1em;}
 #header .aside > ul > li > p {color: #333; font-size: 18px; font-weight: 500;}
