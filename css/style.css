@@ -8,7 +8,7 @@
   font-style: normal;
 }
 @media (max-width: 1920px) {
-  body {
+  .wrap {
     transform: scale(1);
   }
 }
