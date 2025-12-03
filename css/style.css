@@ -195,20 +195,26 @@ a {text-decoration: none;}
 
 @media screen and (max-width: 1100px) {
   #contents .about .intro.item {
-    font-size: 9px !important;
+    font-size: 11px !important;
   }
 }
 
 #contents .about .wrap .intro .skill {
-  width: 90%;
+  width: 85%;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 16px;
   text-align: center;
 }
 
+@media screen and (max-width: 1100px) {
+  #contents .about .intro .skill {
+    font-size: 11px !important;
+  }
+}
+
 #contents .about .wrap .intro .skill_icon {
-  width: 90%;
+  width: 85%;
   margin-top: 10px;
 }
 
